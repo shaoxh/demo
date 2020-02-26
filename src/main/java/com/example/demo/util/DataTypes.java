@@ -1,7 +1,8 @@
 package com.example.demo.util;
 
+import com.example.demo.constant.Constants;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.tracknix.jspmyadmin.framework.constants.Constants;
+//import com.tracknix.jspmyadmin.framework.constants.Constants;
 import lombok.Data;
 
 /**
