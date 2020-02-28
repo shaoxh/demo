@@ -3,19 +3,19 @@ package com.example.demo.util;
 import com.example.demo.constant.ConnectionConfiguration;
 import com.example.demo.constant.ConnectionType;
 import com.example.demo.constant.Constants;
-//import com.tracknix.jspmyadmin.framework.constants.Constants;
 import com.example.demo.exception.EncodingException;
 import com.example.demo.service.ApiConnection;
 import com.example.demo.service.ApiConnectionImpl;
-import org.apache.catalina.servlets.DefaultServlet;
-//import com.tracknix.jspmyadmin.framework.exception.EncodingException;
-//import com.tracknix.jspmyadmin.framework.web.utils.DefaultServlet;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.sql.SQLException;
+
+//import com.tracknix.jspmyadmin.framework.constants.Constants;
+//import com.tracknix.jspmyadmin.framework.exception.EncodingException;
+//import com.tracknix.jspmyadmin.framework.web.utils.DefaultServlet;
 
 /**
  * ConnectionFactory class is to configure the connection details.
@@ -40,7 +40,7 @@ private static final String CONFIG_PATH = "/config.ser";
 
 
     public static Config config = null;
-    public static ConnectionType connectionType;
+    public static ConnectionType connectionType = ConnectionType.LOGIN;
     private static boolean isConfigured = false;
 
     /**

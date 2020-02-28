@@ -1,13 +1,14 @@
 package com.example.demo.service;
 
-import com.example.demo.util.ConnectionFactory;
 import com.example.demo.constant.Constants;
+import com.example.demo.util.ConnectionFactory;
 import com.example.demo.util.RequestAdaptor;
-//import com.tracknix.jspmyadmin.framework.constants.Constants;
-//import com.tracknix.jspmyadmin.framework.web.utils.RequestAdaptor;
 
 import javax.servlet.http.HttpSession;
 import java.sql.*;
+
+//import com.tracknix.jspmyadmin.framework.constants.Constants;
+//import com.tracknix.jspmyadmin.framework.web.utils.RequestAdaptor;
 
 /**
  * @author Yugandhar Gangu
@@ -60,7 +61,7 @@ public class ApiConnectionImpl implements ApiConnection {
      * @param pass password
      * @throws SQLException e
      */
-   public ApiConnectionImpl(String host, String port, String user, String pass) throws SQLException {
+    public ApiConnectionImpl(String host, String port, String user, String pass) throws SQLException {
         try {
             _connection = _openConnection(host, port, user, pass);
         } catch (SQLException e) {
@@ -132,6 +133,8 @@ public class ApiConnectionImpl implements ApiConnection {
         builder.append(Constants.SYMBOL_COLON);
         builder.append(port);
         builder.append(Constants.SYMBOL_BACK_SLASH);
+        // todo: 这里对数据库的请求信息应该放在接口里
+        builder.append("test");
         connection = DriverManager.getConnection(builder.toString(), user, pass);
         return connection;
     }

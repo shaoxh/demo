@@ -4,6 +4,7 @@ package com.example.demo.service;
 //import com.tracknix.jspmyadmin.framework.web.utils.DefaultServlet;
 
 import com.example.demo.constant.Constants;
+import org.springframework.stereotype.Service;
 
 import java.io.Closeable;
 import java.io.File;
@@ -16,6 +17,7 @@ import java.sql.SQLException;
 /**
  * @author Yugandhar Gangu
  */
+@Service
 public class BasicConnection implements ConnectionHelper {
     /**
      * @return ApiConnection
